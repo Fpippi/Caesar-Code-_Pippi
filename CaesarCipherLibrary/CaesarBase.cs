@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace Caesar_Code__Pippi
+namespace CaesarCipherLibrary
 {
     public abstract class CaesarBase
     {
 
-        protected int key { get; set; }
+        protected int Key { get; set; }
 
         private char Cipher(char ch)
         {
@@ -23,8 +21,8 @@ namespace Caesar_Code__Pippi
             {
                 offser = 'a';
             }
-            return (char)(((ch - offser + key) % 26) + offser);
-            
+            return (char)(((ch - offser + Key) % 26) + offser);
+
         }
 
         protected string Dowork(string m)

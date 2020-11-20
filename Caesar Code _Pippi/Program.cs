@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CaesarCipherLibrary;
+using System;
+
 
 namespace Caesar_Code__Pippi
 {
@@ -6,7 +8,12 @@ namespace Caesar_Code__Pippi
     {
         static void Main(string[] args)
         {
-
+            Console.WriteLine("Pippo");
+            CeasarCode cc = new CeasarCode("Pippo" , 5);
+            Console.WriteLine(cc.CipherText);
+            Console.ReadLine();
         }
+
+        
     }
 }
