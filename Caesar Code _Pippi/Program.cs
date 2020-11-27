@@ -8,10 +8,24 @@ namespace Caesar_Code__Pippi
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Pippo");
-            CeasarCode cc = new CeasarCode("Pippo" , 5);
-            Console.WriteLine(cc.CipherText);
-            Console.ReadLine();
+            Console.WriteLine("Inserisci una parola:");
+            string plaintext = Console.ReadLine();
+            int key;
+            CeasarCode ml;
+            try
+            {
+                do
+                {
+                    Console.WriteLine("Inserisci la chiave:");
+                    key = int.Parse(Console.ReadLine());
+                } while (key < 0||key>25);
+                ml = new CeasarCode(plaintext, key);
+                Console.WriteLine($"IL testo cifrato è:{ml.CipherText}");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
 
         
